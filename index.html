@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create a quiz app  using js</title>
+    <link rel="stylesheet" href="src/output.css">
+    <link rel="stylesheet" href="input.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-[#FAF6E7]">
+    <br>
+    
+<!-- container-1 -->
+<div id="container"  class="  transition  mx-auto rounded-3xl  h-[530px] w-[90%] sm:w-[70%] md:w-[70%] lg:w-[60%] bg-[#10152A] ">
+    <div id="image" class="flex justify-center">
+  <img class="h-[100px]  w-[100px]" src=3.png>
+
+    </div>
+
+    <div id="logo" class="flex justify-center py-[10px]">
+
+<a class="text-white text-[14px] lg:text-[30px] md:text-[30px] sm:text-[30px] text-3d text-4xl font-extrabold " style="font-family: 'Dancing Script', cursive;">CLEVER <span class="text-yellow-400">QUIZ</span></a>
+</div>
+<br>
+<br>
+
+<div id="text-content" class="font-extrabold grid text-center justify-center">
+        <h1 class="text-white font-mono text-[20px] ubuntu-font"> let's play !</h1>
+        
+        <a class="text-white font-mono text-[20px] ">Play now and win</a>
+
+</div>
+<br>
+<br>
+<br>
+
+<div id="down-section" class="text-white  grid justify-center py-[30px]">
+    <input type="text" id="input1"  placeholder="Enter your name" class="outline-1  px-[10%]  py-2   text-[13px] sm:text-[14px] md:text-[18px] lg:text-[20px] pl-[20px] focus:outline-white">
+   <br>
+    <label for="input-file" id="uploadlabel" class=" font-bold text-center cursor-pointer py-2 bg-green-300 text-black">
+        Upload your image <i class="fa-solid fa-images text-black"></i>
+    </label>
+   <br>
+    <input type="file" id="input-file" class="hidden"  accept="image/*"/>
+</div>
+</div>
+
+<!-- container-2 -->
+
+<div id="container-2" class=" hidden  transition  font-mono text-white  mx-auto rounded-3xl  h-[630px]  sm:h-[630px] md:h-[630px] lg:h-[530px] w-[90%] sm:w-[70%] md:w-[70%] lg:w-[60%] bg-[#10152A] ">
+<div id="extradiv" class="bg-black  w-[100%] h-[100px] text-white">
+
+    <div id="imageandname" class=" flex ml-[25px]  py-3 text-white">
+
+        <img src="unknown.png" id="bulb" class=" mt-[10px] sm:mt-[0px] md:mt-[0px] lg:mt-[0px] cursor-pointer h-[49px] lg:h-[75px] md:h-[75px] sm:h-[60px]  w-[60px]   sm:w-[70px] md:w-[70px] lg:w-[70px]  border-2 border-white rounded-full">
+      
+
+        <a id="textcont" class="text-white  text-[13px] sm:text-[15px] md:text-[17px] lg:text-[20px] py-4 px-3"> chirag dhiman</a>
+
+</div>
+<div id="icon" class="flex justify-end mr-[10px]  cursor-pointer ">
+    <a class="border-2 px-4  py-1 group hover:bg-[#7BF1A8] hover:text-black transition "><i class="fa-solid transition group-hover:-translate-x-2  fa-arrow-left"></i></a>
+</div>
+</div>
+
+
+
+<div id="cat" class="flex justify-center font-semibold text-[20px] mt-[100px]">
+    <a class="border-b-2 ">Top Quiz Categories</a>
+</div>
+<br>
+<br>
+<div id="cards" class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 justify-items-center   gap-4" >
+    <div id="card1"  data-category="mathematics" class=" cat-btn grid cursor-pointer transition hover:scale-105 justify-center text-center h-[100px] w-[100px] bg-white rounded-2xl">
+<img src="math.png" class="h-[60px] w-[90px]">
+<a class="text-black text-[13px] mb-3 cat-btn" >Mathematics</a>
+    </div>
+
+     <div id="card1" data-category="coding" class=" cat-btn grid cursor-pointer  transition hover:scale-105  justify-center text-center h-[100px] w-[100px] bg-white rounded-2xl">
+<img src="coding.png" class="h-[60px] w-[70px]">
+<a class="text-black text-[13px] mb-3 " >Coding</a>
+    </div>
+
+     <div id="card1" data-category="Sports" class=" cat-btn grid cursor-pointer transition hover:scale-105  justify-center text-center h-[100px] w-[100px] bg-white rounded-2xl">
+<img src="sports.webp" class="h-[60px] w-[70px]">
+<a class="text-black text-[13px] mb-3 " >Sports</a>
+    </div>
+     <div id="card1" data-category="Drama" class=" cat-btn grid cursor-pointer transition hover:scale-105  justify-center text-center h-[100px] w-[100px] bg-white rounded-2xl">
+<img src="drama.png" class="h-[60px] w-[70px]">
+<a class="text-black text-[13px] mb-3" >Drama</a>
+    </div>
+     <div id="card1" data-category="history" class=" cat-btn grid cursor-pointer transition hover:scale-105  justify-center text-center h-[100px] w-[100px] bg-white rounded-2xl">
+<img src="history.png" class="h-[60px] w-[70px]">
+<a class="text-black text-[13px] mb-3 " >History</a>
+    </div>
+     <div id="card1" data-category="book" class=" cat-btn grid cursor-pointer transition hover:scale-105  justify-center text-center h-[100px] w-[100px] bg-white rounded-2xl">
+<img src="book.jpeg" class="h-[60px] w-[70px]">
+<a class="text-black text-[13px] mb-3 " >Book</a>
+    </div>
+</div>
+</div>
+<!-- container-3 -->
+
+<div id="container-3" class="  hidden  transition  font-mono text-white  mx-auto rounded-3xl  h-[530px] w-[100%] sm:w-[90%] md:w-[70%] lg:w-[60%] bg-[#10152A] ">
+    <div id="con" class="flex justify-between">
+
+    
+    <div id="cate" class="ml-[40px] py-4">
+        <a class="text-gray-400 "><i id="icon3" class="fa-solid   fa-arrow-left text-white text-[15px] cursor-pointer border-2 px-5 py-1 hover:text-black  hover:bg-blue-300 "></i> <span id="nam"> Mathematics</span> Quiz</a>
+        <h1 class="text-[27px] font-extrabold">Question<span id="questionfor" class="text-[30px]"> 01/</span><a class="text-gray-400">10</a></h1>
+      
+    </div>
+
+      <div id="timer-container" class="h-[100px] w-[100px]  ">
+            <svg  class="circle-timer " width="120" height="120">
+                <circle class="background" r="50" cx="60" cy="60"></circle>
+              <circle  id="progress" r="50" cx="60" cy="60"></circle>
+
+
+            </svg>
+<div id="time"></div>
+        </div>
+    </div>
+    <div id="q" class="flex justify-center mx-auto mt-[10px] py-3 px-3 text-[20px] text-black bg-white font-extrabold rounded-2xl w-fit ">
+        <a id="que">What does HTML stand for</a>
+
+    </div>
+    <br>
+
+    <div id="options" class="grid  justify-center gap-4">
+        <button   class="button  border-1 flex items-center justify-between border-gray-400 transition  hover:border-white rounded-md p-2  cursor-pointer px-8 pl-[20px]"><a id="but1">hypertext markup language </a> <span><i  class=" options-check fa-regular ml-[100px] text-[20px] fa-circle"></i></span></button>
+        <button  class=" button border-1 flex items-center justify-between border-gray-400 transition hover:border-white  rounded-md p-2 cursor-pointer px-8 pl-[20px]"><a id="but2">Hyper bola usne tola</a>  <span><i  class=" options-check fa-regular ml-[100px] text-[20px] fa-circle"></i></span></button>
+        <button  class=" button border-1 flex items-center justify-between border-gray-400 transition hover:border-white  rounded-md p-2 px-8 pl-[20px] cursor-pointer"><a id="but3">Hyper text bola phir</a> <span><i  class=" options-check fa-regular ml-[100px] text-[20px] fa-circle"></i></span></button>
+        <button  class="button border-1 flex items-center justify-between border-gray-400 transition hover:border-white  rounded-md p-2 px-8 pl-[20px] cursor-pointer"><a id="but4">hello isne bola kisko</a> <span><i  class="options-check fa-regular ml-[100px] text-[20px] fa-circle"></i></span></button>
+    </div>
+    <div id="next-button" class="flex justify-center mt-[30px] ">
+        <button class="text-white hover:bg-blue-800 bg-blue-400 p-2 cursor-pointer px-12 rounded-2xl">Next</button>
+    </div>
+</div>
+
+<!-- container -4 -->
+
+<div id="container-4" class=" hidden transition  font-mono text-white  mx-auto rounded-3xl  h-[530px] w-[100%] sm:w-[90%] md:w-[80%] lg:w-[40%] bg-[#10152A] ">
+<div id="heading" class="text-center py-4 font-extrabold">
+    <h1 >Quiz Result<i class="fa-solid fa-square-poll-vertical text-blue-500 text-[27px]"></i></h1>
+
+
+</div>
+
+
+<div id="tro" class="relative grid justify-center ">
+    <img src="trophy.png" id="conv" class="w-[200px] h-[160px] " >
+    <img src="unknown.png" id="pic" class="   h-[30px] w-[30px] absolute top-[18%] left-[47%] ">
+
+</div>
+<br>
+<div id="cong" class="text-center">
+    <a class="text-[18px]"><span id="final-name"></span></a>
+    <p id="para" class="text-gray-400">Hey champion you really played too well. </p>
+</div>
+<div id="scor" class="grid text-center py-8">
+    <a class="text-gray-400">Your score </a>
+    <h3 id="score" class="text-[29px]"><span></span></h3>
+</div>
+<div id="buton" class="text-center">
+    <button id="but13" class="cursor-pointer font-extrabold p-3 bg-white rounded-2xl text-black">Leaderboard <i class="fa-solid text-black  fa-square-poll-vertical"></i></button>
+    <button id="but12" class="p-3 cursor-pointer hover:bg-blue-600 transition  text-white bg-blue-400 rounded-2xl">Play again</button>
+</div>
+</div>
+
+<!-- container-5 -->
+ <div id="container-5" class=" hidden  transition  font-mono text-white  mx-auto rounded-3xl  h-[530px] w-[100%] sm:w-[90%] md:w-[80%] lg:w-[40%] bg-[#262729] ">
+<div id="nameandicon" class="relative">
+    <i id="pre" class=" absolute fa-solid fa-arrow-left cursor-pointer bg-blue-400 transition hover:bg-blue-600 text-[20px]  p-3 mt-[20px] ml-[20px] px-7 border-white"></i>
+    <a class="flex justify-center font-extrabold py-6">Leaderboard</a>
+</div>
+<div id="ranks" class="flex justify-center gap-14 py-12">
+    <div id="first-rank" class="relative">
+        <i class="fa-solid fa-crown absolute left-[200%]  top-[-100%] text-[#C7F064] text-[26px]"></i>
+        <img src="unknown.png" id="second-rankimg"   class=" rounded-full h-[70px] w-[70px]">
+        <span class="absolute left-[210%]  top-[29%] px-2 bg-[#363F2C] rounded-full">1</span>
+   <p id="second-ame" class="absolute top-[114%] left-[10%]">Chirag dhiman</p>
+    </div>
+     <div id="second-rank" class="mt-[-50px] relative">
+        <img src="unknown.png" id="first-rankimg" class=" rounded-full h-[70px] w-[70px]">
+        <span class="absolute left-[-147%]  top-[92%] px-2 bg-[#363F2C] rounded-full">2</span>
+   <a class="absolute top-[74%] left-[10%] " id="first-ame">Chirag dhiman</a>
+
+    </div>
+     <div id="third-rank" class="relative">
+        <img src="unknown.png" id="third-rankimg"  class=" rounded-full h-[70px] w-[70px]">
+        <span class="absolute left-[27%]  top-[92%] px-2 bg-[#363F2C] rounded-full">3</span>
+   <a id="third-ame" class="absolute top-[114%] left-[10%]">Chirag dhiman</a>
+
+    </div>
+</div>
+<br>
+<br>
+
+<div id="other" class="bg-black overflow-y-scroll  h-[244px] rounded-4xl w-[100%]">
+<br>
+    <div id="first-box">
+      <!-- <p></p>
+    <img src= "" class =" rounded-full h-[30px] w-[30px]">
+    <p></p>
+    <div id="scor" class="mx-auto">
+        <h2></h2>
+    </div> -->
+</div>
+<br>
+
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+<script src="script.js">
+
+</script>
+</body>
+</html>
